@@ -1,4 +1,4 @@
-import streamlit as st
+import demo as st
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, XLMRobertaTokenizer
 import os
@@ -152,7 +152,7 @@ def predict_ml(text, model, vectorizer):
 
 # === Streamlit UI ===
 st.set_page_config(page_title="So sánh cảm xúc từ nhiều mô hình", layout="centered")
-st.title("So sánh dự đoán cảm xúc từ nhiều mô hình 🇻🇳")
+st.title("So sánh dự đoán cảm xúc từ nhiều mô hình Tiếng Việt")
 
 with st.spinner("🔄 Đang tải các mô hình Transformer..."):
     transformer_models = load_transformer_models(MODEL_CONFIGS)
